@@ -1,28 +1,54 @@
-import React, {useState} from "react";
-export default function Box(props){
+import React from "react"
+
+export default function Box(props) {
+    
+    const styles = {
+        backgroundColor: props.on ? "#222222" : "transparent"
+    }
+    
+    return (
+        <div 
+            style={styles} 
+            className="box"
+            // onClick={props.toggle}
+            // changing it to an id toshow wich box was clicked
+            onClick={() =>props.toggle(props.id)}
+        >
+        </div>
+    )
+}
+
+
+
+
+
+
+
+// import React, {useState} from "react";
+// export default function Box(props){
 // This is a functional component named "Box" that takes some props as inputs
  // This line uses the "useState" hook to create a state variable "isOn"
   // and an associated function "setIsOn". The initial value of "isOn" is set
   // to the value passed in the "on" prop.
 
-    const[isOn, setIsOn] = useState(props.on);
-    const toggleBox = () => {
-        setIsOn(!isOn);
-    };
+    // const[isOn, setIsOn] = useState(props.on);
+    // const toggleBox = () => {
+    //     setIsOn(!isOn);
+    // };
   // This function "toggleBox" is defined to toggle the value of "isOn"
   // when the box is clicked.
-   const clicked = {
-    clickedBox: console.log('hoe bag ass shit')
+  //  const clicked = {
+  //   clickedBox: console.log('hoe bag ass shit')
     // This is an object named "clicked" with a property "clickedBox" that
   // logs a message to the console when this object is created.
-   }
-   return (
+  //  }
+  //  return (
      // This is the JSX (JavaScript XML) that represents the component's UI.
   // It returns a <div> element with the following attributes:
-    <div click={clicked} className="box"
-    onClick={toggleBox}></div>
-   )
-}
+//     <div click={clicked} className="box"
+//     onClick={toggleBox}></div>
+//    )
+// }
 
 // This is a React functional component named Box that takes some props as input. It uses the useState hook to manage the state of the isOn variable.
 
