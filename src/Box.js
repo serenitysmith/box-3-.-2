@@ -11,7 +11,7 @@ export default function Box(props) {
             style={styles} 
             className="box"
             // onClick={props.toggle}
-            // changing it to an id toshow wich box was clicked
+            // changing it to an id to show wich box was clicked
             onClick={() =>props.toggle(props.id)}
         >
         </div>
